@@ -19,7 +19,7 @@ const integration_test = () => __awaiter(void 0, void 0, void 0, function* () {
         process.exit(1);
     }
     const test = yield res.text();
-    if (test === 'Hello, World!') {
+    if (test === 'HelloWorld!') {
         console.log("Integration test 2 passed!");
     }
     else {

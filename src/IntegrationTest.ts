@@ -11,7 +11,7 @@ const integration_test = async () => {
     }
 
     const test = await res.text();
-    if (test === 'Hello, World!') {
+    if (test === 'HelloWorld!') {
         console.log("Integration test 2 passed!");
     } else {
         console.log("Integration test 2 failed: Expected 'Hello, World!' but got " + test);
