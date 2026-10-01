@@ -11,3 +11,4 @@
 !src/*
 !package.json
 !tsconfig.json
+!dist/IntegrationTest.js
