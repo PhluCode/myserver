@@ -1,25 +1,20 @@
-const BASE_URL = 'http://localhost:3000';
+import { calculator } from './Calculator';
 
 const integration_test = async () => {
-    const res = await fetch(BASE_URL + '/')
-
-    if (res.status === 200) {
-        console.log("Integration test 1 passed!");
+    
+    if (calculator.sum([1, 2, 3]) === 6) {
+        console.log("Integration test 1 passed! (sum)");
     } else {
-        console.log("Integration test 1  failed: Expected 200 but got " + res.status);
+        console.log("Integration test 1 failed: expected 6 but got " + calculator.sum([1, 2, 3]));
         process.exit(1);
     }
 
-    const test = await res.text();
-    if (test === 'HelloWorld!') {
-        console.log("Integration test 2 passed!");
+    if (calculator.average([2, 4, 6]) === 4) {
+        console.log("Integration test 2 passed! (average)");
     } else {
-        console.log("Integration test 2 failed: Expected 'Hello, World!' but got " + test);
+        console.log("Integration test 2 failed: expected 4 but got " + calculator.average([2, 4, 6]));
         process.exit(1);
     }
 }
 
-integration_test().catch((err) => {
-    console.error("Integration test failed with error: ", err);
-    process.exit(1);
-});
+integration_test();
