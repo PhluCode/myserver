@@ -13,3 +13,7 @@
 !tsconfig.json
 !dist/IntegrationTest.js
 !dist/Calculator.js
+.env
+!frontend-react/
+!frontend-react/**
+!nodemon.json
