@@ -17,3 +17,6 @@
 !frontend-react/
 !frontend-react/**
 !nodemon.json
+!Dockerfile
+!docker-compose.yml
+!.dockerignore
